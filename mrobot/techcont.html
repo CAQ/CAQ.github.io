@@ -1,0 +1,77 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>MRobot</title>
+<style type="text/css">
+<!--
+.STYLE4 {
+	font-size: 16px;
+	font-weight: bold;
+}
+.STYLE5 {
+	font-size: 16px;
+	font-style: italic;
+}
+-->
+</style>
+<script type="text/JavaScript">
+<!--
+
+
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+//-->
+</script>
+<body>
+<h1><a name="block" id="block">Block Map</a> Overview </h1>
+<ul>
+  <li>There're three components in MRobot: SCM (Single Chip Machine), DSP Controller and the Mobile Phone. </li>
+  <li>User uses mobile phone to interact with the program, while in some usages the phone could send commands automatically. The mobile phone uses Bluetooth to send or receive commands and information to/from the SCM. SCM gets data from Mobile phone in order to direct the DSP Controller, at the same time it gets data from other sensors and transport them back to phone.</li>
+  <li>The calculation, decision-making and path-planning are done within the phone. The SCM is treated as an interface between user and sensors/motors. </li>
+</ul>
+<p align="center"><a href="images/block.jpg" target="_blank"><img src="images/blocksmall.jpg" alt="Click for larger image" width="380" height="214" border="0"></a></p>
+<p align="left">&nbsp;</p>
+<p align="left">&nbsp;</p>
+<p align="left">&nbsp;</p>
+<p align="left">&nbsp;</p>
+<h1><a name="hard" id="hard">Hardware and Sensor </a></h1>
+<p align="center"><a href="images/hardware.jpg" target="_blank"><img src="images/hardsmall.jpg" alt="Hardware and Sensor" width="380" height="184" border="0"></a><br>
+</p>
+<ul>
+  <li>Click above to view a larger figure.</li>
+  <li>The hardware and sensors cost several hundereds Yuan in total. </li>
+</ul>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h1><a name="soft" id="soft">Software Design</a></h1>
+<p align="center"><a href="images/software.jpg" target="_blank"><img src="images/softsmall.jpg" alt="Software Design" width="380" height="191" border="0"></a></p>
+<ul>
+  <li>Develop kit: J2ME wireless toolkit 2.2 for Windows</li>
+  <li>Develop tool: Eclipse 3.1 + EclipseMe 1.6.1</li>
+  <li>Mobile Phone: Nokia 6681</li>
+  <li>Programs (see Demo page for video clips):
+    <ul>
+      <li>Use keyboard on the phone to control robot (M-Drive Toy mode) </li>
+      <li>Read in GPS data, display the position on a map, and indicate people</li>
+      <li>Guard in the room. If the door is open, give alarm and send short message to another phone (M-Guard mode)</li>
+      <li>Guide people on the road, stops when meeting obstacles (M-Eye Guide mode)  </li>
+    </ul>
+  </li>
+</ul>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>

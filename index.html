@@ -1,28 +1,592 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<html lang="en">
 <head>
 <meta charset="utf-8">
-<title>CAQ's GitHub Web Services</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+<meta name="description" content="Homepage of Anqi Cui, caq9.info">
+<meta name="author" content="Anqi Cui">
+<link rel="icon" href="../../favicon.ico">
+
+<title>CAQ</title>
+
+<!-- Bootstrap core CSS -->
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="bootstrap/css/bootstrap.3.glyphicon.css" rel="stylesheet">
+
+<!-- Custom styles for this template -->
+<link href="css/carousel.css" rel="stylesheet">
 </head>
+<!-- NAVBAR
+================================================== -->
 <body>
-<h1>CAQ's GitHub Web Services</h1>
-<ul>
-<li>Hunting Game: <a href="wlyx/wlyx.html" target="_blank">Go</a> <a href="https://github.com/CAQ/huntinggame" target="_blank">Repository</a></li>
-<li>Web Development Tools: <a href="webtools/" target="_blank">Go</a> <a href="https://github.com/CAQ/webtools" target="_blank">Repository</a></li>
-</ul>
-<h1>Blog</h1>
-<ul>
-<li><a href="point-pelee-birds/">Point Pelee birds</a></li>
-</ul>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    <nav class="navbar navbar-static-top navbar-light bg-faded">
+        <a href="#" class="navbar-brand">CAQ</a>
+        <ul class="nav navbar-nav">
+            <li class="nav-item active"><a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="#Education">Education</a></li>
+            <li class="nav-item"><a class="nav-link" href="#Publications">Publications</a></li>
+            <li class="nav-item"><a class="nav-link" href="#Experiences">Experiences</a></li>
+            <li class="nav-item"><a class="nav-link" href="#Projects">Projects</a></li>
+            <li class="nav-item"><a class="nav-link" href="#Hobbies">Hobbies</a></li>
+            <li class="nav-item"><a class="nav-link" href="#Online">Online</a></li>
+        </ul>
+    </nav>
 
-  ga('create', 'UA-51181389-1', 'caq.github.io');
-  ga('send', 'pageview');
+    <!-- Carousel
+    ================================================== -->
 
-</script>
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+            <div class="carousel-item active" style="text-align:center">
+                <img class="first-slide" src="img/carousel/1.jpg" alt="Scenery view of Oakville, Mississauga and Toronto from Mount Nemo">
+                <div class="container">
+                    <div class="carousel-caption"><h1>Welcome</h1><p>... to the personal website of Anqi Cui (崔安颀).</p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item" style="text-align:center">
+                <img class="second-slide" src="img/carousel/2.jpg" alt="Aerial view of Toronto downtown">
+                <div class="container">
+                    <div class="carousel-caption"><h1>Working</h1><p>... in Waterloo, I am now the VP Engineering and Co-Founder of RSVP Technologies Inc.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item" style="text-align:center">
+                <img class="third-slide" src="img/carousel/3.jpg" alt="Zhizhu Temple">
+                <div class="container">
+                    <div class="carousel-caption"><h1>Growing</h1><p>... up in Beijing, I love this city for its culture and food.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true" style="top:246px"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true" style="top:246px"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div><!-- /.carousel -->
+
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="container marketing">
+
+        <!-- Three columns of text below the carousel -->
+        <div class="row">
+            <div class="col-lg-4">
+                <h2>
+                    <span class="glyphicon glyphicon-education" aria-hidden="true"></span>
+                </h2>
+                <p>I learn computer science and natural language processing in Tsinghua University.</p>
+                <p>
+                    <a class="btn btn-secondary" href="#Education" role="button">Education &raquo;</a>
+                </p>
+            </div><!-- /.col-lg-4 -->
+
+            <div class="col-lg-4">
+                <h2>
+                    <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+                </h2>
+                <p>I write books, papers and patents to publish my research achievements.</p>
+                <p>
+                    <a class="btn btn-secondary" href="#Publications" role="button">Publications &raquo;</a>
+                </p>
+            </div><!-- /.col-lg-4 -->
+
+            <div class="col-lg-4">
+                <h2>
+                    <span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span>
+                </h2>
+                <p>I work in RSVP Technologies Inc. We teach machines to understand human languages.</p>
+                <p>
+                    <a class="btn btn-secondary" href="#Experiences" role="button">Experiences &raquo;</a>
+                </p>
+            </div><!-- /.col-lg-4 -->
+
+            <div class="col-lg-4">
+                <h2>
+                    <span class="glyphicon glyphicon-wrench" aria-hidden="true"></span>
+                </h2>
+                <p>I create projects to improve our lives with computer.</p>
+                <p>
+                    <a class="btn btn-secondary" href="#Projects" role="button">Projects &raquo;</a>
+                </p>
+            </div><!-- /.col-lg-4 -->
+
+            <div class="col-lg-4">
+                <h2>
+                    <span class="glyphicon glyphicon-music" aria-hidden="true"></span>
+                </h2>
+                <p>I play games, accordion and watersports in my spare time.</p>
+                <p>
+                    <a class="btn btn-secondary" href="#Hobbies" role="button">Hobbies &raquo;</a>
+                </p>
+            </div><!-- /.col-lg-4 -->
+
+            <div class="col-lg-4">
+                <h2>
+                    <span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
+                </h2>
+                <p>Find me on online social media services!</p>
+                <p>
+                    <a class="btn btn-secondary" href="#Online" role="button">Online &raquo;</a>
+                </p>
+            </div><!-- /.col-lg-4 -->
+
+        </div><!-- /.row -->
+
+        <!-- START THE FEATURETTES -->
+
+        <hr class="featurette-divider">
+        <div class="row featurette">
+            <a name="Education"></a>
+            <div class="col-md-9">
+                <h2 class="featurette-heading">Education</h2>
+
+<p class="lead">Doctor of Philosophy (Computer Science and Technology)</p>
+<p>2008/09 - 2013/07. Tsinghua University, Beijing. Graduated with Department Honors.</p>
+<p>PhD dissertation: Study on Public Sentiment Analysis of Events in Microblogs. <a href="http://www.thuir.org/" target="_blank">THUIR</a> group.</p>
+<p>Master's thesis: A Prediction Method for Anti-germ Performances and Key Ingredient Levels of Detergents.</p>
+<p>&nbsp;</p>
+
+<p class="lead">Bachelor of Engineering (Computer Science and Technology)</p>
+<p>2004/08 - 2008/07. Tsinghua University, Beijing. Graduated with Department Honors.</p>
+<p>Bachelor's thesis: Study on Image Recognition Methods for Industrial Parts on Automated Production Lines.</p>
+<p>Awards: Feitu Scholarship, China Construction Bank Scholarship, <a href="http://web.archive.org/web/20081104182131/http://www2.ccw.com.cn/weekly/news/htm2008/20080112_369012.shtml" target="_blank">China Computer World (CCW) Scholarship</a> etc.</p>
+<p>&nbsp;</p>
+
+<p class="lead">High School</p>
+<p>2001 - 2004. Beijing Jingshan School.</p>
+
+            </div>
+            <div class="col-md-3">
+                <img class="featurette-image img-fluid mx-auto" src="img/featurette/education.jpg" alt="My seat in Tsinghua's lab">
+            </div>
+        </div><!-- /.row -->
+
+<a href="#"><span class="float-xs-right glyphicon glyphicon-menu-up" aria-hidden="true"></span></a>
+        <hr class="featurette-divider">
+        <div class="row featurette">
+            <a name="Publications"></a>
+            <div class="col-md-9 push-md-3">
+                <h2 class="featurette-heading">Publications</h2>
+
+<div id="accordionBooks" role="tablist" aria-multiselectable="true">
+  <div class="card">
+    <div class="card-header" role="tab" id="headingBooks">
+      <h5 class="mb-0">
+        <a data-toggle="collapse" data-parent="#accordionBooks" href="#collapseBooks" aria-expanded="True" aria-controls="collapseBooks">Books</a>
+      </h5>
+    </div><!-- /.card-header -->
+
+    <div id="collapseBooks" class="collapse in" role="tabpanel" aria-labelledby="headingBooks">
+      <div class="card-block">
+<ul>
+  <li>刘知远, 崔安颀, 等. 大数据智能：互联网时代的机器学习和自然语言处理技术. 北京: 电子工业出版社, 2016年1月第1版.<br /> Zhiyuan Liu, Anqi Cui, et al. Big Data Intelligence: Machine Learning and Natural Language Processing in The Internet Age. Beijing: Publishing House of Electronics Industry, 2016.<br />ISBN: 9787121276484. <a href="http://nlp.csai.tsinghua.edu.cn/~lzy/books/bdi.html" target="_blank">Link</a></li>
+</ul>
+
+      </div>
+    </div><!-- /.collapse -->
+  </div><!-- /.card -->
+</div><!-- /.accordion -->
+
+<div id="accordionPatents" role="tablist" aria-multiselectable="true">
+  <div class="card">
+    <div class="card-header" role="tab" id="headingPatents">
+      <h5 class="mb-0">
+        <a  class="collapsed"data-toggle="collapse" data-parent="#accordionPatents" href="#collapsePatents" aria-expanded="False" aria-controls="collapsePatents">Patents</a>
+      </h5>
+    </div><!-- /.card-header -->
+
+    <div id="collapsePatents" class="collapse" role="tabpanel" aria-labelledby="headingPatents">
+      <div class="card-block">
+<ul>
+  <li>徐华, 万伟, 张文浩, 崔安颀, 胡新成, 邓刚, 希勒布兰德·格雷格. 一种皮肤状况预测方法及其预测系统. 中国. 发明专利, CN101916334B, 2010-08-16申请, 2015-08-12授权. <a href="http://epub.sipo.gov.cn/patent/CN101916334A" target="_blank">SIPO</a><br /> Hua Xu, Wei Wan, Wenhao Zhang, Anqi Cui, Xincheng Hu, Gang Deng, Greg Hillebrand. Prediction method of skin conditions and prediction system thereof. PRC Invention Application Publication. Publication No. CN101916334B disclosed on Aug. 12th, 2015.</li>
+  <li>Tat-Seng Chua, Hadi Amiriebrahimabadi, Yan Chen, Anqi Cui. Micropost Brand Monitoring. International Patent. Publication No. WO/2015/065290 (May 7, 2015). International Application No. PCT/SG2014/000508. <a href="https://patentscope.wipo.int/search/en/detail.jsf?docId=WO2015065290" target="_blank">WIPO</a></li>
+  <li>崔安颀, 张敏, 刘奕群, 马少平, 金奕江. 一种识别微博突发热点事件的方法及装置. 中国. 发明专利, CN103455639A, 2013-12-18公开. <a href="http://epub.sipo.gov.cn/patent/CN103455639A" target="_blank">SIPO</a><br /> Anqi Cui, Min Zhang, Yiqun Liu, Shaoping Ma, Yijiang Jin. Method and Device for Recognizing Microblog Burst Hotspot Events. PRC Invention Application Publication. Publication No. CN103455639 (Dec. 18, 2013). Application No. 201310452806X.</li>
+  <li>徐华, 崔安颀, 大谷庆彦, 井内文. 预测洗涤产品的抗菌性能或关键成分含量的方法及装置. 中国. 发明专利, CN101551374B, 2009-05-14申请, 2013-03-27授权. <a href="http://epub.sipo.gov.cn/patent/CN101551374B" target="_blank">SIPO</a><br /> Hua Xu, Anqi Cui, Ryohei Otani, Fumi Iuchi. Method and Apparaus for Predicting Antibiotic Performance or Critical Ingredient Content of Detergent. PRC Invention Application Publication. Publication No. CN101551374 disclosed on Mar. 27th, 2013.</li>
+</ul>
+
+      </div>
+    </div><!-- /.collapse -->
+  </div><!-- /.card -->
+</div><!-- /.accordion -->
+
+<div id="accordionPapers" role="tablist" aria-multiselectable="true">
+  <div class="card">
+    <div class="card-header" role="tab" id="headingPapers">
+      <h5 class="mb-0">
+        <a  class="collapsed"data-toggle="collapse" data-parent="#accordionPapers" href="#collapsePapers" aria-expanded="False" aria-controls="collapsePapers">Papers</a>
+      </h5>
+    </div><!-- /.card-header -->
+
+    <div id="collapsePapers" class="collapse" role="tabpanel" aria-labelledby="headingPapers">
+      <div class="card-block">
+<ul>
+  <li>Anqi Cui, Guangyu Feng, Borui Ye, Kun Xiong, Xing Yi Liu, Ming Li. UWNLP at the NTCIR-12 Short Text Conversation Task. Proceedings of the 12th NTCIR Conference on Evaluation of Information Access Technologies. June 7-10, 2016. <a href="http://research.nii.ac.jp/ntcir/workshop/OnlineProceedings12/NTCIR/toc_ntcir.html#STC02" target="_blank">Link</a></li>
+  <li>Guangyu Feng, Kun Xiong, Yang Tang, Anqi Cui, Jing Bai, Hang Li, Qiang Yang, Ming Li. Question Classification by Approximating Semantics. Proceedings of the 24th International Conference on World Wide Web Companion, WWW 2015 Companion. May 18-22, 2015. <a href="http://dx.doi.org/10.1145/2740908.2745403" target="_blank">DOI: 10.1145/2740908.2745403</a></li>
+  <li>Fei Jiang, Anqi Cui, Yiqun Liu, Min Zhang, Shaoping Ma. Every Term Has Sentiment: Learning from Emoticon Evidences for Chinese Microblog Sentiment Analysis. Proceedings of the 2nd Conference on Natural Language Processing and Chinese Computing, NLP&CC 2013. Nov 15-19, 2013. Full Oral Paper. <a href="http://dx.doi.org/10.1007/978-3-642-41644-6_21" target="_blank">DOI: 10.1007/978-3-642-41644-6_21</a></li>
+  <li>Anqi Cui, Haochen Zhang, Yiqun Liu, Min Zhang, Shaoping Ma. Lexicon-based Chinese Opinion Analysis on Online Product Reviews. Journal of Computational Information Systems, 9 (11): 4533–4540 (2013). Full Paper. EI Accession No.: 20133016534008 <a href="https://www.scopus.com/record/display.uri?eid=2-s2.0-84880389402&origin=inward&txGid=1234CC265DD1383F63D802B5F173672E.wsnAw8kcdt7IPYLO0V48gA%3a2" target="_blank">DOI: 10.12733/jcis6207</a></li>
+  <li>Anqi Cui, Haochen Zhang, Yiqun Liu, Min Zhang, Shaoping Ma. Lexicon-based Sentiment Analysis on Topical Chinese Microblog Messages. Proceedings of the Joint Conference of the 6th Chinese Semantic Web Symposium (CSWS) and the 1st Chinese Web Science Conference (CWSC2012), SWWS2012: 333–344. Nov 28-30, 2012. Full Oral Paper. Acceptance: full paper 25/54 (46.3%), all 34/59 (57.6%). <a href="http://dx.doi.org/10.1007/978-1-4614-6880-6_29" target="_blank">DOI: 10.1007/978-1-4614-6880-6_29</a></li>
+  <li>Anqi Cui, Min Zhang, Yiqun Liu, Shaoping Ma, Kuo Zhang. Discover Breaking Events with Popular Hashtags in Twitter. Proceedings of the 21st ACM International Conference on Information and Knowledge Management, CIKM2012: 1794–1798. Oct 29-Nov 2, 2012. Short Paper. Acceptance: full paper 146/1088 (13.4%), short paper 156/1088 (14.3%). EI Accession No.: 20125115816888 <a href="http://doi.acm.org/10.1145/2396761.2398519" target="_blank">DOI: 10.1145/2396761.2398519</a></li>
+  <li>Anqi Cui, Liner Yang, Dejun Hou, Min-Yen Kan, Yiqun Liu, Min Zhang, Shaoping Ma. PrEV: Preservation Explorer and Vault for Web 2.0 User-Generated Content. Proceedings of the 2012 International Conference on Theory and Practice of Digital Libraries, TPDL2012: 101–112. Sep 23-27, 2012. Full Oral Paper. Acceptance: full paper 23/109 (21.1%), short paper 19/109, poster 14/109. EI Accession No.: 20124315604577 <a href="http://dx.doi.org/10.1007/978-3-642-33290-6_12" target="_blank">DOI: 10.1007/978-3-642-33290-6_12</a></li>
+  <li>Anqi Cui, Min Zhang, Yiqun Liu, Shaoping Ma. Emotion Tokens: Bridging the Gap Among Multilingual Twitter Sentiment Analysis. Proceedings of the 7th Asia Information Retrieval Societies Conference, AIRS2011: 238–249. Dec 18-20, 2011. Full Oral Paper. Acceptance: full paper 32/132, all 61/132. EI Accession No.: 20115214642655 <a href="http://dx.doi.org/10.1007/978-3-642-25631-8_22" target="_blank">DOI: 10.1007/978-3-642-25631-8_22</a></li>
+  <li>Hadi Amiri, Yang Bao, Anqi Cui, Anindya Datta, Fang Fang, Xiaoying Xu. NUSIS at TREC 2011 Microblog Track: Refining Query Results with Hashtags. TREC 2011 Report. Nov 15-18, 2011. *All authors contribute equally to the work, and are listed in alphabetical order of their surnames. EI Accession No.: 20130716022563 <a href="http://trec.nist.gov/pubs/trec20/papers/NUSIS.microblog.pdf" target="_blank">PDF</a></li>
+  <li>Anqi Cui, Min Zhang, Yiqun Liu, Shaoping Ma. Are the URLs Really Popular in Microblog Messages? Proceedings of the 2011 IEEE International Conference on Cloud Computing and Intelligence Systems, CCIS2011: 1–5. Sep 15-17, 2011. Full Oral Paper. Acceptance: TBA. EI Accession No.: 20114414482293 <a href="http://dx.doi.org/10.1109/CCIS.2011.6045021" target="_blank">DOI: 10.1109/CCIS.2011.6045021</a></li>
+  <li>Danqing Xu, Yiqun Liu, Min Zhang, Shaoping Ma, Anqi Cui, Liyun Ru. Predicting Epidemic Tendency through Search Behavior Analysis. Proceedings of the 22nd International Joint Conference on Artificial Intelligence, IJCAI2011: 2361-2366. Jul 16-22, 2011. Full Oral Paper. <a href="http://dx.doi.org/10.5591/978-1-57735-516-8/IJCAI11-393" target="_blank">DOI: 10.5591/978-1-57735-516-8/IJCAI11-393</a></li>
+  <li>Anqi Cui, Hua Xu, Peifa Jia. An Elman Neural Network-based Model for Predicting Anti-germ Performances and Ingredient Levels with Limited Experimental Data. Expert Systems with Applications, 38(7): 8186–8192 (2011). Full Oral Paper. SCI IDS 743VV, UT WOS:000289047700032. IF=1.924 (2010). EI Accession No.: 20111113737842 <a href="http://dx.doi.org/10.1016/j.eswa.2010.12.164" target="_blank">DOI: 10.1016/j.eswa.2010.12.164</a></li>
+  <li>Anqi Cui, Jeff Schneider. Active Learning for Fast Drug Discovery. CMU Machine Learning Department Technical Reports. Mar 2010. <a href="http://reports-archive.adm.cs.cmu.edu/anon/ml2010/CMU-ML-10-103.pdf" target="_blank">Link</a></li>
+  <li>Anqi Cui, Hua Xu, Peifa Jia. Anti-germ Performance Prediction for Detergents Based on Elman Network on Small Data Sets. Proceedings of the 5th International Conference on Advanced Data Mining and Applications, ADMA2009: 79–90. Aug 17-19, 2009. Full Oral Paper. Acceptance: full paper 39/322 (12.1%), all 92/322. EI Accession No.: 20094412414723. <a href="http://dx.doi.org/10.1007/978-3-642-03348-3_11" target="_blank">DOI: 10.1007/978-3-642-03348-3_11</a></li>
+  <li>崔安颀, 岑荣伟, 张敏, 马少平. 基于URL特征的动态页面聚类[C] // 萧国政, 何炎祥, 孙茂松. 中文计算技术与语言问题研究: 第七届中文信息处理国际会议论文集. 北京: 电子工业出版社, 2007: 475-479. Anqi Cui, Rongwei Cen, Min Zhang, Shaoping Ma. Dynamic Web-Pages Clustering Based on URL Features. Proceedings of the 7th International Conference on Chinese Computing, ICCC2007: 475–479. Oct 13-17, 2007. Short Paper.</li>
+</ul>
+
+      </div>
+    </div><!-- /.collapse -->
+  </div><!-- /.card -->
+</div><!-- /.accordion -->
+
+            </div>
+            <div class="col-md-3 pull-md-9">
+                <img class="featurette-image img-fluid mx-auto" src="img/featurette/publications.jpg" alt="Big Data Intelligence">
+            </div>
+        </div><!-- /.row -->
+
+<a href="#"><span class="float-xs-right glyphicon glyphicon-menu-up" aria-hidden="true"></span></a>
+        <hr class="featurette-divider">
+        <div class="row featurette">
+            <a name="Experiences"></a>
+            <div class="col-md-9">
+                <h2 class="featurette-heading">Experiences</h2>
+
+<div class="media">
+  <div class="media-left">
+    <a href="http://rsvptech.ca/" target="_blank">
+      <img class="media-object" src="img/experiences/rsvp.jpg" alt="RSVP Technologies Inc." width="100px">
+    </a>
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading">VP Engineering</h4><p>Since 2014. VP Engineering and Co-Founder of RSVP Technologies Inc. <a href="https://cs.uwaterloo.ca/news/news-record-rsvp-technologies-inc-receives-grant-federal-government" target="_blank">News</a></p><p>&nbsp;</p>
+  </div>
+</div>
+
+<div class="media">
+  <div class="media-left">
+    <a href="https://web.archive.org/web/20150915165348/https://cs.uwaterloo.ca/about/people/caq" target="_blank">
+      <img class="media-object" src="img/experiences/university-of-waterloo-logo.png" alt="University of Waterloo" width="100px">
+    </a>
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading">Postdoctoral Fellow</h4>
+    <p>2013/09 - 2016/04. University of Waterloo.</p>
+    <p>Developed Question-Answering systems.</p>
+    <p>&nbsp;</p>
+
+  </div>
+</div>
+
+<div class="media">
+  <div class="media-left">
+    <a href="http://next.comp.nus.edu.sg/people/cui-anqi" target="_blank">
+      <img class="media-object" src="img/experiences/nus.png" alt="National University of Singapore" width="100px">
+    </a>
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading">Postgraduate Intern</h4>
+<p>2011/05 - 2012/08. National University of Singapore.</p>
+<p>Developed <a href="#Projects">PrEV</a> and <a href="#Projects">StrmWrd</a> with the <a href="http://wing.comp.nus.edu.sg/" target="_blank">WING</a> group.</p>
+<p>Developed <a href="#Projects">OrgSense</a> under the <a href="http://next.comp.nus.edu.sg/" target="_blank">NExT</a> project.</p>
+<p>&nbsp;</p>
+
+  </div>
+</div>
+
+<div class="media">
+  <div class="media-left">
+    <a href="http://www.ri.cmu.edu/person.html?person_id=2308" target="_blank">
+      <img class="media-object" src="img/experiences/cmu.png" alt="Carnegie Mellon University" width="100px">
+    </a>
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading">Visiting PhD Student</h4>
+<p>2009/09 - 2010/03. Carnegie Mellon University, Pittsburgh.</p>
+<p>Research on Active Learning for Fast Drug Discovery with the <a href="http://www.autonlab.org/" target="_blank">Auton Lab</a>.</p>
+<p>&nbsp;</p>
+
+  </div>
+</div>
+
+<div class="media">
+  <div class="media-left">
+    <a href="http://www.tsinghua.edu.cn/" target="_blank">
+      <img class="media-object" src="img/experiences/tsinghua.jpg" alt="Tsinghua University" width="100px">
+    </a>
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading">Teaching Assistants</h4>
+<p>2008/09 - 2009/01. Discrete Maths (II). Tsinghua University, Beijing.</p>
+<p>2009/03 - 2009/07. Microcomputer Technology. Tsinghua University, Beijing.</p>
+<p>&nbsp;</p>
+
+  </div>
+</div>
+
+            </div>
+            <div class="col-md-3">
+                <img class="featurette-image img-fluid mx-auto" src="img/featurette/experiences.jpg" alt="ColorRun with colleagues">
+            </div>
+        </div><!-- /.row -->
+
+<a href="#"><span class="float-xs-right glyphicon glyphicon-menu-up" aria-hidden="true"></span></a>
+        <hr class="featurette-divider">
+        <div class="row featurette">
+            <a name="Projects"></a>
+            <div class="col-md-9 push-md-3">
+                <h2 class="featurette-heading">Projects</h2>
+
+<div class="row">
+
+  <div class="col-md-6">
+    <div class="card">
+      <img class="card-img" src="img/projects/brandinblog.jpg" alt="BrandinBlog" width="100%">
+      <div class="card-img-overlay" style="background-color:rgba(255,255,255,0.85);">
+        <h4 class="card-title">BrandinBlog</h4>
+    <p class="card-text">A sentiment analysis system for marketing support of corporations.</p>
+    <a href="https://www.youtube.com/watch?v=7YfiRb9Fi9E" target="_blank" class="btn btn-primary">Demo (YouTube)</a>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <div class="card">
+      <img class="card-img" src="img/projects/prev.jpg" alt="PrEV" width="100%">
+      <div class="card-img-overlay" style="background-color:rgba(255,255,255,0.85);">
+        <h4 class="card-title">PrEV</h4>
+    <p class="card-text">A Preservation Explorer & Vault system for Web 2.0 contents.</p>
+    <a href="http://sui.ddns.comp.nus.edu.sg/prev/" target="_blank" class="btn btn-primary">Homepage</a>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+<div class="row">
+
+  <div class="col-md-6">
+    <div class="card">
+      <img class="card-img" src="img/projects/strmwrd.jpg" alt="StrmWrd" width="100%">
+      <div class="card-img-overlay" style="background-color:rgba(255,255,255,0.85);">
+        <h4 class="card-title">StrmWrd</h4>
+    <p>HTML5 widgets for comparative keywords and trends visualization.</p>
+    <a href="https://github.com/THUNUS/StrmWrd" target="_blank" class="btn btn-primary">Source</a>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <div class="card">
+      <img class="card-img" src="img/projects/orgsense.jpg" alt="OrgSense" width="100%">
+      <div class="card-img-overlay" style="background-color:rgba(255,255,255,0.85);">
+        <h4 class="card-title">OrgSense</h4>
+    <p>A brand monitoring system on social media micro-posts, influential users and emerging topics.</p>
+    <a href="http://www.umiacs.umd.edu/~hadi/papers/dsdc-06-16-15.pdf" target="_blank" class="btn btn-primary">Reference (P16-19)</a>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+<div class="row">
+
+  <div class="col-md-6">
+    <div class="card">
+      <img class="card-img" src="img/projects/mrobot.jpg" alt="MRobot Hardware Architecture" width="100%">
+      <div class="card-img-overlay" style="background-color:rgba(255,255,255,0.85);">
+        <h4 class="card-title">MRobot</h4>
+    <p>An intelligent robot on mobile phone platform. Won Tsinghua challenging cup prizes in 2007.</p>
+    <a href="http://www.youtube.com/watch?v=LeBdSJQapiQ" target="_blank" class="btn btn-primary">Demo (1)</a>
+    <a href="http://www.youtube.com/watch?v=xV8ruZNkum0" target="_blank" class="btn btn-primary">Demo (2)</a>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <div class="card">
+      <img class="card-img" src="img/projects/wenquxing.jpg" alt="WenQuXing PC1000a" width="100%">
+      <div class="card-img-overlay" style="background-color:rgba(255,255,255,0.85);">
+        <h4 class="card-title">Hunting Game</h4>
+    <p>A strategy game on WenQuXing, a smart electronic dictionary device.</p>
+    <a href="wlyx/wlyx.html" target="_blank" class="btn btn-primary">Play!</a>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+<div class="row">
+<p>More projects on <a href="https://github.com/CAQ" target="_blank">GitHub</a>, e.g. <a href="webtools/">Web development tools</a>.</p>
+</div>
+
+            </div>
+            <div class="col-md-3 pull-md-9">
+                <img class="featurette-image img-fluid mx-auto" src="img/featurette/projects.jpg" alt="MRobot">
+            </div>
+        </div><!-- /.row -->
+
+<a href="#"><span class="float-xs-right glyphicon glyphicon-menu-up" aria-hidden="true"></span></a>
+        <hr class="featurette-divider">
+        <div class="row featurette">
+            <a name="Hobbies"></a>
+            <div class="col-md-9">
+                <h2 class="featurette-heading">Hobbies</h2>
+
+<div class="row">
+
+  <div class="col-md-6">
+    <div class="card">
+      <img class="card-img" src="img/hobbies/qingke.jpg" alt="Xiangsheng: Qing Ke" width="100%">
+      <div class="card-img-overlay" style="background-color:rgba(255,255,255,0.85);">
+        <h4 class="card-title">Xiangsheng</h4><p><a href="https://www.youtube.com/watch?v=PItgpGP_IOY" target="_blank">Qing Ke</a> and <a href="https://www.youtube.com/watch?v=3DJsl_hPkI8" target="_blank">The Full Story of the Lama and the Dummy</a></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <div class="card">
+      <img class="card-img" src="img/hobbies/accordion.jpg" alt="Playing accordion" width="100%">
+      <div class="card-img-overlay" style="background-color:rgba(255,255,255,0.85);">
+        <h4 class="card-title">Accordion</h4><p><a href="https://www.youtube.com/watch?v=lMnOBFi6Phs" target="_blank">Good News from Beijing to the Borderland</a></p>
+      </div>
+    </div>
+  </div>
+
+</div>
+<div class="row">
+
+  <div class="col-md-6">
+    <div class="card">
+      <img class="card-img" src="img/hobbies/boardgame.jpg" alt="Self-made SanGuoSha cards" width="100%">
+      <div class="card-img-overlay" style="background-color:rgba(255,255,255,0.85);">
+        <h4 class="card-title">Board Games</h4><p>I've played more than 50 board games. Sometimes I <a href="https://www.flickr.com/photos/53294882@N05/albums/72157626055433224" target="_blank">create</a>.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <div class="card">
+      <img class="card-img" src="img/hobbies/kayak.jpg" alt="Kayaking on the Grand River" width="100%">
+      <div class="card-img-overlay" style="background-color:rgba(255,255,255,0.85);">
+        <h4 class="card-title">Watersports</h4><p>I love swimming, kayaking, <a href="https://www.youtube.com/watch?v=jhfQQOG67mg" target="_blank">stand-up paddling</a> and <a href="https://www.youtube.com/playlist?list=PLF_NH9aZvpOjwQ7rofZT36V0Qb4BNDQso" target="_blank">snorkeling</a>.</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+<div class="row">
+
+  <div class="col-md-6">
+    <div class="card">
+      <img class="card-img" src="img/hobbies/pittsburgh.jpg" alt="Pittsburgh downtown night view from Mt Washington" width="100%">
+      <div class="card-img-overlay" style="background-color:rgba(255,255,255,0.85);">
+        <h4 class="card-title">Traveling</h4><p>I plan to organize my traveling photos in a geographic view. Please check back later.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <div class="card">
+      <img class="card-img" src="img/hobbies/sunset.jpg" alt="Sunset in Paphos, Cyprus" width="100%">
+      <div class="card-img-overlay" style="background-color:rgba(255,255,255,0.85);">
+        <h4 class="card-title">Collections</h4><p>I collect <a href="http://www.flickr.com/photos/53294882@N05/sets/72157625672760312/" target="_blank">coins</a>, <a href="http://www.flickr.com/photos/53294882@N05/sets/72157627868343484/" target="_blank">university souvenirs</a> and postcards. I also collect <a href="https://www.youtube.com/playlist?list=PLF_NH9aZvpOi7MHu_25Tfv1-7Pq5X8oNT" target="_blank">sunset videos</a> in traveling.</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+<div class="row">
+
+</div>
+
+            </div>
+            <div class="col-md-3">
+                <img class="featurette-image img-fluid mx-auto" src="img/featurette/hobbies.jpg" alt="Kayaking in Marina Bay, Singapore">
+            </div>
+        </div><!-- /.row -->
+
+<a href="#"><span class="float-xs-right glyphicon glyphicon-menu-up" aria-hidden="true"></span></a>
+        <hr class="featurette-divider">
+        <div class="row featurette">
+            <a name="Online"></a>
+            <div class="col-md-9 push-md-3">
+                <h2 class="featurette-heading">Online</h2>
+
+<div class="row">
+<div class="col-xs-1"><a href="http://www.alphabounce.com/user/602828" target="_blank"><img src="img/online/alphabounce.png" width="40px" alt="Alphabounce:CAQ9"></a></div>
+<div class="col-xs-1"><a href="http://www.douban.com/people/caq9/" target="_blank"><img src="img/online/douban.png" width="40px" alt="Douban:CAQ"></a></div>
+<div class="col-xs-1"><a href="http://www.facebook.com/cuianqi" target="_blank"><img src="img/online/facebook.png" width="40px" alt="Facebook:cuianqi"></a></div>
+<div class="col-xs-1"><a href="http://www.flickr.com/people/53294882@N05/" target="_blank"><img src="img/online/flickr.png" width="40px" alt="Flickr:CAQ9"></a></div>
+<div class="col-xs-1"><a href="http://www.forvo.com/user/cuianqi" target="_blank"><img src="img/online/forvo.png" width="40px" alt="Forvo:cuianqi"></a></div>
+<div class="col-xs-1"><a href="https://foursquare.com/caq9" target="_blank"><img src="img/online/foursquare.png" width="40px" alt="Foursquare:CAQ9"></a></div>
+<div class="col-xs-1"><a href="https://github.com/CAQ" target="_blank"><img src="img/online/github.png" width="40px" alt="Github:CAQ"></a></div>
+<div class="col-xs-1"><a href="https://plus.google.com/112564547353733630870" target="_blank"><img src="img/online/googleplus.png" width="40px" alt="Google+:Anqi Cui"></a></div>
+<div class="col-xs-1"><a href="http://www.kongregate.com/accounts/CAQ9" target="_blank"><img src="img/online/kongregate.png" width="40px" alt="Kongregate:CAQ9"></a></div>
+<div class="col-xs-1"><a href="http://cn.linkedin.com/pub/anqi-cui/8/531/896" target="_blank"><img src="img/online/linkedin.png" width="40px" alt="LinkedIn:Anqi Cui"></a></div>
+<div class="col-xs-1"><a href="http://openflights.org/user/CAQ" target="_blank"><img src="img/online/openflights.png" width="40px" alt="OpenFlights:CAQ"></a></div>
+<div class="col-xs-1"><a href="https://www.quora.com/profile/Anchee-Cui" target="_blank"><img src="img/online/quora.png" width="40px" alt="Quora:Anchee Cui"></a></div>
+</div><div class="row">
+<div class="col-xs-1"><a href="#" target="_blank"><img src="img/online/skype.png" width="40px" alt="Skype:anqi.cui"></a></div>
+<div class="col-xs-1"><a href="http://open.spotify.com/user/caq9" target="_blank"><img src="img/online/spotify.png" width="40px" alt="Spotify:caq9"></a></div>
+<div class="col-xs-1"><a href="http://twitter.com/CAQ9" target="_blank"><img src="img/online/twitter.png" width="40px" alt="Twitter:CAQ9"></a></div>
+<div class="col-xs-1"><a href="#" target="_blank"><img src="img/online/wechat.png" width="40px" alt="WeChat:cuianqi9"></a></div>
+<div class="col-xs-1"><a href="http://weibo.com/caq9" target="_blank"><img src="img/online/weibo.png" width="40px" alt="Weibo:CAQ9"></a></div>
+<div class="col-xs-1"><a href="http://zh.wikipedia.org/zh/User:Caq" target="_blank"><img src="img/online/wikipedia.png" width="40px" alt="Wikipedia:Caq"></a></div>
+<div class="col-xs-1"><a href="http://www.youtube.com/user/cuianqi" target="_blank"><img src="img/online/youtube.png" width="40px" alt="YouTube:cuianqi"></a></div>
+</div>
+            </div>
+            <div class="col-md-3 pull-md-9">
+                <img class="featurette-image img-fluid mx-auto" src="img/featurette/online.jpg" alt="My profile logo on most social media">
+            </div>
+        </div><!-- /.row -->
+
+<a href="#"><span class="float-xs-right glyphicon glyphicon-menu-up" aria-hidden="true"></span></a>
+        <hr class="featurette-divider">
+
+        <!-- /END THE FEATURETTES -->
+
+        <!-- FOOTER -->
+        <footer>
+<a href="#"><span class="float-xs-right glyphicon glyphicon-menu-up" aria-hidden="true"></span></a>
+            <p>&copy; 2016 Anqi Cui &middot; <a href="http://full.caq9.info/" target="_blank">Detailed (previous version) homepage</a></p>
+        </footer>
+    </div>
+    <!-- /.container -->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script>
+        window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+    </script>
+    <script src="js/tether.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="bootstrap/js/vendor/holder.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="bootstrap/js/ie10-viewport-bug-workaround.js"></script>
 </body>
 </html>
