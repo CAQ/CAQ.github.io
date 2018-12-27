@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>RegExp Extractor</title>
+<script type="text/javascript">
+
+var extract = function() {
+  var reg = document.getElementById("regex").value;
+  var text = document.getElementById("text").value;
+  var g0 = document.getElementById("g0").checked;
+  var maxcount = document.getElementById("max").value;
+
+  var ind = g0 ? 0 : 1;
+
+  var re = new RegExp(reg, "g");
+  var m;
+  var count = 0;
+  var output = "<table border=1>";
+  while (m = re.exec(text)) {
+    output += "<tr>";
+    for (var i = ind; i < m.length; i++) {
+      output += "<td><code>" + m[i] + "</code></td>";
+    }
+    output += "</tr>";
+    count++;
+    if (count >= maxcount) break;
+  }
+  output += "</table>";
+
+  document.getElementById("result").innerHTML = output;
+};
+
+</script>
+</head>
+<body>
+<h1>RegExp Extractor</h1>
+<p>
+Regular expression: <code>new RegExp("<input type="text" id="regex" value=".+"/>", "g")</code> (Use parentheses to extract multiple groups)<br/>
+Text: <input type="button" value="Extract!" onclick="extract();"/>
+Max results: <input type="text" id="max" value="50"/>
+<input type="checkbox" id="g0" checked/>Include group(0)
+<br/>
+<textarea rows=5 cols=100 id="text">Lorem ipsum</textarea>
+</p>
+<div id="result"></div>
+<hr/>
+Powered by CAQ, Dec 2018
+</body>
+</html>
