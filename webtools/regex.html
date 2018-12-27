@@ -20,7 +20,7 @@ var extract = function() {
   while (m = re.exec(text)) {
     output += "<tr>";
     for (var i = ind; i < m.length; i++) {
-      output += "<td><code>" + m[i] + "</code></td>";
+      output += "<td><code>" + (typeof(m[i]) === "undefined" ? "" : m[i]) + "</code></td>";
     }
     output += "</tr>";
     count++;
