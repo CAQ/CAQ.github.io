@@ -200,9 +200,9 @@ var changeAvatar = function(obj) {
   reader.readAsDataURL(fs[0]);
 };
 
-var checkName = function() {
-  var obj = document.getElementById("name");
-  var s = obj.innerHTML;
+var changeName = function(obj) {
+  var s = prompt("请输入姓名", "张**");
+  if (s == null) return;
   if (s.length < 2) {
     s = "张**";
   }
@@ -210,9 +210,9 @@ var checkName = function() {
   obj.innerHTML = s;
 };
 
-var checkSfz = function() {
-  var obj = document.getElementById("sfz");
-  var s = obj.innerHTML;
+var changeSfz = function(obj) {
+  var s = prompt("请输入身份证号", "11**************00");
+  if (s == null) return;
   if (s.length < 18) {
     s = "11**************00";
   }
@@ -229,16 +229,57 @@ var changeFrameColor = function() {
     s = s.replace("g.dots", "b.dots");
   f.src = s;
 };
+
+// https://www.w3schools.com/howto/howto_js_fullscreen.asp
+/* Get the documentElement (<html>) to display the page in fullscreen */
+var elem = document.documentElement;
+var fullscreened = false;
+
+/* View in fullscreen */
+function openFullscreen() {
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.mozRequestFullScreen) { /* Firefox */
+    elem.mozRequestFullScreen();
+  } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE/Edge */
+    elem.msRequestFullscreen();
+  }
+}
+
+/* Close fullscreen */
+function closeFullscreen() {
+  if (document.exitFullscreen) {
+    document.exitFullscreen();
+  } else if (document.mozCancelFullScreen) { /* Firefox */
+    document.mozCancelFullScreen();
+  } else if (document.webkitExitFullscreen) { /* Chrome, Safari and Opera */
+    document.webkitExitFullscreen();
+  } else if (document.msExitFullscreen) { /* IE/Edge */
+    document.msExitFullscreen();
+  }
+}
+
+var toggleFullscreen = function() {
+  if (fullscreened) {
+    closeFullscreen();
+    fullscreened = false;
+  } else {
+    openFullscreen();
+    fullscreened = true;
+  }
+};
 </script>
 </head>
-<body onload="resize(); refreshTime(); refreshFrame();" onresize="resize();">
+<body onload="resize(); refreshTime(); refreshFrame();" onresize="resize();" ondblclick="toggleFullscreen();">
   <div id="time-corner">17:35</div>
-  <div id="datetime" onclick="checkName(); checkSfz();">2020年03月31日<br/>17:35:28</div>
+  <div id="datetime">2020年03月31日<br/>17:35:28</div>
   <img id="avatar" src="avatar.jpg"/>
   <input type="file" id="file" accept="image/*" style="display: none;" onchange="changeAvatar(this);"/>
   <img id="frame" src="b.dots1.png" onclick="document.getElementById('file').click();">
-  <div class="info" id="name" contenteditable="true">张**</div>
-  <div class="info" id="sfz" contenteditable="true">11**************00</div>
+  <div class="info" id="name" onclick="changeName(this);">张**</div>
+  <div class="info" id="sfz" onclick="changeSfz(this);">11**************00</div>
   <div class="info" id="query">03-31 17:29</div>
   <div class="info" id="expiry" onclick="changeFrameColor();">03-31 24:00</div>
 </body>
