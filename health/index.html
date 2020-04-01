@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<style>
+body, html {
+  height: 100%;
+}
+
+body {
+  background-image: url('health-bg.jpg');
+  background-repeat: no-repeat;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -10;
+  zoom: 1;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-position: center 0;
+}
+
+#time-corner {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 34px;
+  color: #eaeef7;
+  position: absolute;
+  left: 16px;
+  top: 17px;
+}
+
+#datetime {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 46px;
+  color: #666666;
+  position: absolute;
+  width: 100%;
+  margin: 0 auto;
+  top: 285px;
+  text-align: center;
+  line-height: 70px;
+}
+
+#avatar {
+  height: 543px;
+  width: 546px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  top: 491px;
+}
+
+#frame {
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  z-index: 99;
+}
+
+.info {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 46px;
+  text-align: right;
+  color: #4d4d4d;
+  position: absolute;
+  right: 500px;
+}
+
+#name {
+  top: 1255px;
+}
+
+#sfz {
+  top: 1350px;
+}
+
+#query {
+  top: 1445px;
+}
+
+#expiry {
+  top: 1540px;
+  color: #f70303;
+}
+</style>
+<script>
+var first = true;
+var refreshTime = function() {
+  var today = new Date();
+  var date = today.getFullYear() + "年" + ("0" + (today.getMonth() + 1)).slice(-2) + "月" + ("0" + today.getDate()).slice(-2) + "日";
+  var time0 = ("0" + today.getHours()).slice(-2) + ":" + ("0" + today.getMinutes()).slice(-2);
+  var time1 = time0 + ":" + ("0" + today.getSeconds()).slice(-2);
+  document.getElementById("time-corner").innerHTML = time0;
+  document.getElementById("datetime").innerHTML = date + "<br>" + time1;
+  if (first) {
+    var date0 = ("0" + (today.getMonth() + 1)).slice(-2) + "-" + ("0" + today.getDate()).slice(-2);
+    document.getElementById("query").innerHTML = date0 + " " + time0;
+    document.getElementById("expiry").innerHTML = date0 + " 24:00";
+    first = false;
+  }
+  setTimeout(refreshTime, 1000);
+};
+
+var changeSize = function(id, attr, v) {
+  var es = [];
+  if (id[0] == ".") {
+    es = document.getElementsByClassName(id.slice(1));
+  } else {
+    es = [document.getElementById(id)];
+  }
+  for (var i = 0; i < es.length; i++) {
+    var e = es[i];
+    var p = Math.floor(v) + "px";
+    var p6 = Math.floor(v - 6) + "px";
+    // console.log(id + " " + attr + " " + p);
+    switch (attr) {
+      case "fontSize":
+        e.style.fontSize = p;
+        break;
+      case "left":
+        e.style.left = p6;
+        break;
+      case "right":
+        e.style.right = p;
+        break;
+      case "top":
+        e.style.top = p6;
+        break;
+      case "line-height":
+        e.style.lineHeight = p;
+        break;
+      case "height":
+        e.style.height = p;
+        break;
+      case "width":
+        e.style.width = p;
+        break;
+    }
+  }
+};
+
+var resize = function() {
+  var w = document.body.clientWidth;
+  // console.log(w);
+  var r = w / 1080.0;
+  changeSize("time-corner", "fontSize", 34 * r);
+  changeSize("time-corner", "left", 16 * r);
+  changeSize("time-corner", "top", 17 * r);
+
+  changeSize("datetime", "fontSize", 46 * r);
+  //changeSize("datetime", "left", 367 * r);
+  changeSize("datetime", "top", 285 * r);
+  changeSize("datetime", "line-height", 70 * r);
+
+  changeSize("avatar", "height", 543 * r);
+  changeSize("avatar", "width", 546 * r);
+  //changeSize("avatar", "left", 263 * r);
+  changeSize("avatar", "top", 487 * r);
+
+  changeSize("frame", "height", 596 * r);
+  changeSize("frame", "width", 595 * r);
+  //changeSize("frame", "left", 240 * r);
+  changeSize("frame", "top", 462 * r);
+
+  changeSize(".info", "fontSize", 46 * r);
+  changeSize(".info", "right", 120 * r);
+  changeSize("name", "top", 1255 * r);
+  changeSize("sfz", "top", 1350 * r);
+  changeSize("query", "top", 1445 * r);
+  changeSize("expiry", "top", 1540 * r);
+};
+
+var refreshFrame = function() {
+  var f = document.getElementById("frame");
+  var s = f.src;
+  if (s.endsWith("dots1.png"))
+    s = s.replace("1.png", "2.png");
+  else if (s.endsWith("dots2.png"))
+    s = s.replace("2.png", "1.png");
+  f.src = s;
+  // console.log(s);
+  setTimeout(refreshFrame, 400);
+};
+
+var changeAvatar = function(obj) {
+  var fs = obj.files;
+  if (fs.length == 0) return;
+  var reader = new FileReader();
+  reader.onload = (function(theFile) {
+    return function(e) {
+      document.getElementById("avatar").src = e.target.result;
+      resize();
+    }
+  })(fs[0]);
+  reader.readAsDataURL(fs[0]);
+};
+
+var checkName = function() {
+  var obj = document.getElementById("name");
+  var s = obj.innerHTML;
+  if (s.length < 2) {
+    s = "张**";
+  }
+  s = s[0] + "*".repeat(s.length - 1);
+  obj.innerHTML = s;
+};
+
+var checkSfz = function() {
+  var obj = document.getElementById("sfz");
+  var s = obj.innerHTML;
+  if (s.length < 18) {
+    s = "11**************00";
+  }
+  s = s[0] + s[1] + "*".repeat(s.length - 4) + s[s.length - 2] + s[s.length - 1];
+  obj.innerHTML = s;
+};
+
+var changeFrameColor = function() {
+  var f = document.getElementById("frame");
+  var s = f.src;
+  if (s.indexOf("b.dots") > 0)
+    s = s.replace("b.dots", "g.dots");
+  else if (s.indexOf("g.dots") > 0)
+    s = s.replace("g.dots", "b.dots");
+  f.src = s;
+};
+</script>
+</head>
+<body onload="resize(); refreshTime(); refreshFrame();" onresize="resize();">
+  <div id="time-corner">17:35</div>
+  <div id="datetime" onclick="checkName(); checkSfz();">2020年03月31日<br/>17:35:28</div>
+  <img id="avatar" src="avatar.jpg"/>
+  <input type="file" id="file" accept="image/*" style="display: none;" onchange="changeAvatar(this);"/>
+  <img id="frame" src="b.dots1.png" onclick="document.getElementById('file').click();">
+  <div class="info" id="name" contenteditable="true">张**</div>
+  <div class="info" id="sfz" contenteditable="true">11**************00</div>
+  <div class="info" id="query">03-31 17:29</div>
+  <div class="info" id="expiry" onclick="changeFrameColor();">03-31 24:00</div>
+</body>
+</html>
