@@ -10,6 +10,9 @@ body, html {
 }
 
 body {
+}
+
+#bg {
   background-image: url('health-bg.jpg');
   background-repeat: no-repeat;
   position: absolute;
@@ -273,6 +276,7 @@ var toggleFullscreen = function() {
 </script>
 </head>
 <body onload="resize(); refreshTime(); refreshFrame();" onresize="resize();" ondblclick="toggleFullscreen();">
+  <img id="bg" src="health-bg.jpg"/>
   <div id="time-corner">17:35</div>
   <div id="datetime">2020年03月31日<br/>17:35:28</div>
   <img id="avatar" src="avatar.jpg"/>
