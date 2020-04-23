@@ -219,13 +219,18 @@ var changeSfz = function(obj) {
   obj.innerHTML = s;
 };
 
+var colors = ["b", "g", "m", "p"];
 var changeFrameColor = function() {
   var f = document.getElementById("frame");
   var s = f.src;
-  if (s.indexOf("b.dots") > 0)
-    s = s.replace("b.dots", "g.dots");
-  else if (s.indexOf("g.dots") > 0)
-    s = s.replace("g.dots", "b.dots");
+  for (var c = 0; c < colors.length; c++) {
+    var c1 = colors[c] + ".dots";
+    var c2 = colors[(c + 1) % colors.length] + ".dots";
+    if (s.indexOf(c1) > 0) {
+      s = s.replace(c1, c2);
+      break;
+    }
+  }
   f.src = s;
 };
 
