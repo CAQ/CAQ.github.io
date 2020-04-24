@@ -219,13 +219,13 @@ var changeSfz = function(obj) {
   obj.innerHTML = s;
 };
 
-var colors = ["b", "g", "m", "p"];
+var COLORS = ["b", "g", "m", "p", "o"];
 var changeFrameColor = function() {
   var f = document.getElementById("frame");
   var s = f.src;
-  for (var c = 0; c < colors.length; c++) {
-    var c1 = colors[c] + ".dots";
-    var c2 = colors[(c + 1) % colors.length] + ".dots";
+  for (var c = 0; c < COLORS.length; c++) {
+    var c1 = COLORS[c] + ".dots";
+    var c2 = COLORS[(c + 1) % COLORS.length] + ".dots";
     if (s.indexOf(c1) > 0) {
       s = s.replace(c1, c2);
       break;
@@ -276,10 +276,10 @@ var toggleFullscreen = function() {
 };
 </script>
 </head>
-<body onload="resize(); refreshTime(); refreshFrame();" onresize="resize();" ondblclick="toggleFullscreen();">
+<body onload="resize(); refreshTime(); refreshFrame();" onresize="resize();">
   <!--<img id="bg" src="health-bg.jpg"/>-->
   <div id="time-corner">17:35</div>
-  <div id="datetime">2020年03月31日<br/>17:35:28</div>
+  <div id="datetime" onclick="toggleFullscreen();">2020年03月31日<br/>17:35:28</div>
   <img id="avatar" src="avatar.jpg"/>
   <input type="file" id="file" accept="image/*" style="display: none;" onchange="changeAvatar(this);"/>
   <img id="frame" src="b.dots1.png" onclick="document.getElementById('file').click();">
@@ -287,5 +287,16 @@ var toggleFullscreen = function() {
   <div class="info" id="sfz" onclick="changeSfz(this);">11**************00</div>
   <div class="info" id="query">03-31 17:29</div>
   <div class="info" id="expiry" onclick="changeFrameColor();">03-31 24:00</div>
+<script>
+  if (document.images) {
+    var preImg1 = new Array(), preImg2 = new Array();
+    for (var c = 0; c < COLORS.length; c++) {
+      preImg1[c] = new Image();
+      preImg1[c].src = COLORS[c] + ".dots1.png";
+      preImg2[c] = new Image();
+      preImg2[c].src = COLORS[c] + ".dots2.png";
+    }
+  }
+</script>
 </body>
 </html>
