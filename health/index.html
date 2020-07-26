@@ -15,12 +15,31 @@ body {
   top: 0;
   left: 0;
   width: 100%;
+  margin: 0 auto;
   z-index: -10;
   zoom: 1;
   background-size: cover;
   -webkit-background-size: cover;
   -o-background-size: cover;
   background-position: center 0;
+}
+
+#scan-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 90;
+  zoom: 1;
+}
+
+#scan-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+  zoom: 1;
 }
 
 #time-corner {
@@ -58,7 +77,7 @@ body {
   position: absolute;
   left: 50%;
   transform: translate(-50%, 0%);
-  z-index: 99;
+  z-index: 9;
 }
 
 .info {
@@ -210,7 +229,7 @@ var changeName = function(obj) {
 };
 
 var changeSfz = function(obj) {
-  var s = prompt("请输入身份证号", "11**************00");
+  var s = prompt("请输入身份证号", "11**************20");
   if (s == null) return;
   if (s.length < 18) {
     s = "11**************00";
@@ -274,18 +293,57 @@ var toggleFullscreen = function() {
     fullscreened = true;
   }
 };
+
+var scanBar = function() {
+  var w = document.body.clientWidth;
+  var r = w / 1080.0;
+  var t = document.getElementById("scan-bar").style.top;
+  t = parseInt(t, 10);
+  t += 5;
+  if (t < 300 * r || t > 1000 * r) t = 300 * r;
+  document.getElementById("scan-bar").style.top = t + "px";
+  d = document.getElementById("scan-bar").style.display;
+  if (d == "none") return;
+  setTimeout(scanBar, 30);
+};
+
+var scan = function() {
+  document.getElementById("scan-bg").style.display = "block";
+  document.getElementById("scan-bar").style.display = "block";
+  document.getElementById("scan-bar").style.top = 0;
+  scanBar();
+  setTimeout(scanSuccess, 3000);
+};
+
+var scanSuccess = function() {
+  var a = document.getElementById("audio");
+  var sfz = document.getElementById("sfz").innerHTML;
+  var i = parseInt(sfz.charAt(sfz.length - 2), 10);
+  if (isNaN(i)) {
+    i = 2;
+  } else {
+    i = i % 4;
+  }
+  a.src = "pass" + i + ".ogg";
+  a.play();
+  document.getElementById("scan-bg").style.display = "none";
+  document.getElementById("scan-bar").style.display = "none";
+};
+
 </script>
 </head>
 <body onload="resize(); refreshTime(); refreshFrame();" onresize="resize();">
-  <!--<img id="bg" src="health-bg.jpg"/>-->
+  <img id="scan-bar" src="scan-bar.png" style="display: none;">
+  <img id="scan-bg" src="scan-bg.png" style="display: none;">
+  <audio id="audio"><source src="pass2.ogg" type="audio/ogg"></audio>
   <div id="time-corner">17:35</div>
   <div id="datetime" onclick="toggleFullscreen();">2020年03月31日<br/>17:35:28</div>
   <img id="avatar" src="avatar.jpg"/>
   <input type="file" id="file" accept="image/*" style="display: none;" onchange="changeAvatar(this);"/>
   <img id="frame" src="b.dots1.png" onclick="document.getElementById('file').click();">
   <div class="info" id="name" onclick="changeName(this);">张**</div>
-  <div class="info" id="sfz" onclick="changeSfz(this);">11**************00</div>
-  <div class="info" id="query">03-31 17:29</div>
+  <div class="info" id="sfz" onclick="changeSfz(this);">11**************20</div>
+  <div class="info" id="query" onclick="scan();">03-31 17:29</div>
   <div class="info" id="expiry" onclick="changeFrameColor();">03-31 24:00</div>
 <script>
   if (document.images) {
